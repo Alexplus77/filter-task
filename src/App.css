@@ -29,23 +29,33 @@
   background-color: #0e37cb;
 ;
 }
+body{
+  background-color: #828284;
+}
 .container{
+  position: relative;
+  max-width: 1117px;
+  margin: 0 auto;
   display: grid;
   gap: 10px;
-  background-color: #aaa8a8;
+
 }
 .containerCards{
+
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 350px);
+  gap: 5px;
+  grid-template-columns: repeat(3, 360px);
 
 }
 .containerCards > * {
+width: 350px;
+  height: 250px;
   border-radius: 10px;
   border:  #282c34 solid;
 }
 
 .toolbar{
+  margin-top: 10px;
   display: grid;
 gap: 5px;
 grid-template-columns: repeat(4, 150px);
