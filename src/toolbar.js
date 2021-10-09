@@ -1,11 +1,11 @@
 import React from "react";
+import './App.css'
+const Toolbar = ({selectFilter, filters, selected}) =>{
 
-const Toolbar = ({selectFilter}) =>{
-    const filters = ["All", "Websites", "Flayers", "Business Cards"]
     return (
-    <div>
+    <div className='toolbar'>
         {
-            filters.map((filter, i)=><button key={i} onClick={()=>selectFilter(filter)}>{filter}</button>)
+            ['All', ...filters].map((filter, i)=><button key={i} className={selected===filter ? 'App-link': null } onClick={()=>selectFilter(filter)}>{filter}</button>)
         }
     </div>
     )

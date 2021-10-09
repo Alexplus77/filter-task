@@ -25,14 +25,36 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #eef0f7;
+  background-color: #0e37cb;
+;
+}
+.container{
+  display: grid;
+  gap: 10px;
+  background-color: #aaa8a8;
+}
+.containerCards{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 350px);
+
+}
+.containerCards > * {
+  border-radius: 10px;
+  border:  #282c34 solid;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toolbar{
+  display: grid;
+gap: 5px;
+grid-template-columns: repeat(4, 150px);
+  grid-template-rows: 30px;
+
+
 }
+.toolbar > * {
+  border-radius: 5px;
+}
+
+

@@ -1,10 +1,11 @@
 import React from 'react'
+ import './App.css'
 
-const ProjectList = ({projectList}) =>{
+const ProjectList = ({projectItem}) =>{
     return (
-       <div>
+       <div className='containerCards'>
            {
-               projectList.map(({img, category}, i)=><img key={i} src={img} alt={category}/>)
+               projectItem.map(({img, category}, i)=><img  key={i} src={img} alt={category}/>)
            }
        </div>
     )
