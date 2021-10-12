@@ -77,20 +77,18 @@ const Portfolio = () => {
 
   const filters = new Set(projectList.map(({ category }) => category));
 
-  const [projectItem, setFilterItem] = useState(projectList);
+  const [projectItem, setProjectItem] = useState(projectList);
   const [selected, setSelected] = useState("All");
 
-  const selectFilter = (filter) => {
-    let selected = filter;
+  const handleSelectFilter = (filter) => {
     let filterProject;
-
     filter === "All"
       ? (filterProject = projectList)
       : (filterProject = projectList.filter(
           ({ category }) => category === filter
         ));
-    setSelected(selected);
-    setFilterItem(filterProject);
+    setSelected(filter);
+    setProjectItem(filterProject);
   };
 
   return (
@@ -98,7 +96,7 @@ const Portfolio = () => {
       <Toolbar
         selected={selected}
         filters={filters}
-        selectFilter={selectFilter}
+        handleSelectFilter={handleSelectFilter}
       />
       <ProjectList projectItem={projectItem} />
     </div>
