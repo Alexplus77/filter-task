@@ -1,12 +1,12 @@
-
-import './App.css';
+import "./App.css";
 import React from "react";
-import Portfolio from "./portfolio";
+import Portfolio from "./Components/portfolio";
+
 function App() {
   return (
-   <div >
-<Portfolio />
-   </div>
+    <div>
+      <Portfolio />
+    </div>
   );
 }
 
